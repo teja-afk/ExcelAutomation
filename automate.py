@@ -26,7 +26,7 @@ try:
     # Copy values
     for row in range(START_ROW, src_ws.max_row + 1):
         for col in range(2, 9):      # B:H
-            tmp_ws.cell(row=row, column=col).value = src_ws.cell(row=row, column=col).value
+            tmp_ws.cell(row=row, column=col).value = src_ws.cell(row=row, column=col).value.strip()
 
     # Save
     tmp_wb.save(TEMPLATE_FILE)
